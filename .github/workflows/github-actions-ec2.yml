@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout the files
-        uses: actions/checkout@2.311.0
+        uses: actions/checkout@v2.311.0
 
       - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@master
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
